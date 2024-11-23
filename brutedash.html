@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Enhanced Futuristic Dashboard</div>
+
+        <!-- Target Input -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="targetInput" placeholder="Enter Target URL or IP" 
+                style="width: 300px; padding: 10px; border: none; border-radius: 10px; outline: none;">
+        </div>
+
+        <!-- Dashboard Panels -->
+        <div class="dashboard">
+            <div class="panel">
+                <div class="panel-header">Reconnaissance</div>
+                <button onclick="runTask('/run-recon')">Run Reconnaissance</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">SQL Injection Test</div>
+                <button onclick="runTask('/run-sql-injection')">Run SQL Injection Test</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">XSS Test</div>
+                <button onclick="runTask('/run-xss')">Run XSS Test</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Authentication Test</div>
+                <button onclick="runTask('/run-auth-test')">Run Authentication Test</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Security Header Check</div>
+                <button onclick="runTask('/run-security-header-check')">Run Security Header Check</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Brute Force Test</div>
+                <button onclick="runTask('/run-brute-force')">Run Brute Force Test</button>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Automated Vulnerability Scan</div>
+                <button onclick="runTask('/run-automated-scan')">Run Automated Scan</button>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div class="loader" id="loadingSpinner" style="display:none;"></div>
+    </div>
+
+    <!-- Console Box -->
+    <div class="console-box" id="console">
+        <h3>Console Output</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
